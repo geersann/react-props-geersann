@@ -18,12 +18,12 @@ export default function App() {
     'Cryptocurrency'
   ]
 
-  const firstItemLowerCase = items[0].toLowerCase();
+  const itemsLowerCase = items.map(item => item.toLocaleLowerCase());
 
   return (
     <div>
       Some data:
-      <First item={firstItemLowerCase} />
+      <First items={itemsLowerCase} />
     </div>
   )
 };

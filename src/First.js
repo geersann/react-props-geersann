@@ -1,11 +1,13 @@
 import React from 'react';
 
-function First({ item }) {
+function First({ items }) {
     return (
         <ul>
-            <li style={{listStyle: 'none'}}>
-                {item}
-            </li>
+            {items.length > 0 && (
+                <li style={{listStyle: 'none'}} key={items[0]}>
+                    {items[0]}
+                </li>
+            )}
         </ul>
     );
 };
